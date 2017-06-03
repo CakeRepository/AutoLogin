@@ -75,14 +75,15 @@
             // 
             // BuilderButtonClick
             // 
+            this.BuilderButtonClick.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BuilderButtonClick.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuilderButtonClick.ForeColor = System.Drawing.Color.Red;
             this.BuilderButtonClick.Location = new System.Drawing.Point(12, 99);
             this.BuilderButtonClick.Name = "BuilderButtonClick";
-            this.BuilderButtonClick.Size = new System.Drawing.Size(86, 39);
+            this.BuilderButtonClick.Size = new System.Drawing.Size(86, 48);
             this.BuilderButtonClick.TabIndex = 4;
             this.BuilderButtonClick.Text = "Generate";
-            this.BuilderButtonClick.UseVisualStyleBackColor = true;
+            this.BuilderButtonClick.UseVisualStyleBackColor = false;
             this.BuilderButtonClick.Click += new System.EventHandler(this.BuilderButtonClick_Click);
             // 
             // RemoveButton
@@ -92,7 +93,7 @@
             this.RemoveButton.ForeColor = System.Drawing.Color.Red;
             this.RemoveButton.Location = new System.Drawing.Point(124, 99);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(82, 39);
+            this.RemoveButton.Size = new System.Drawing.Size(82, 48);
             this.RemoveButton.TabIndex = 5;
             this.RemoveButton.Text = "Remove ";
             this.RemoveButton.UseVisualStyleBackColor = false;
@@ -119,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(219, 159);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DomainTextBox);

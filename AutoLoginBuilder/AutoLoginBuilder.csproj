@@ -46,7 +46,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>chevron.ico</ApplicationIcon>
+    <ApplicationIcon>ninjakirby_71d_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="chevron.ico" />
+    <Content Include="ninjakirby_71d_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

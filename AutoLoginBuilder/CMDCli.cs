@@ -16,6 +16,10 @@ namespace AutoLoginBuilder
             {
                 remover();
             }
+            else if (args.Length == 2)
+            {
+                adderNoDomain(args[0], args[1]);
+            }
             else if(args.Length == 3)
             {
                 adder(args[0], args[1], args[2]);
@@ -24,6 +28,13 @@ namespace AutoLoginBuilder
             {
                 throw new ArgumentOutOfRangeException("num2 > double.MaxValue - num1.");
             }
+        }
+        private void adderNoDomain(string username,string password)
+        {
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v AutoAdminLogon /t REG_SZ /d 1 /f /reg:64");
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultUserName /t REG_SZ /d " + username + "  /f /reg:64");
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultDomainName /t REG_SZ /d " + p+p + " /f /reg:64");
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultPassword /t REG_SZ /d " + password + " /f /reg:64");
         }
         private void adder(string domain,string username,string password)
         { 
