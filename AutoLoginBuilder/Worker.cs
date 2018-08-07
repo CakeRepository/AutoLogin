@@ -12,7 +12,7 @@
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/K " + Command;
+            startInfo.Arguments = "/C " + Command;
             process.StartInfo = startInfo;
             process.Start();
             process.Close();

@@ -31,7 +31,7 @@ namespace AutoLoginBuilder
         }
         private void adderNoDomain(string username,string password)
         {
-            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v AutoAdminLogon /t REG_SZ /d 1 /f /reg:64");
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v AutoAdminLogon /t REG_SZ /d 1 /f /reg:32");
             wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultUserName /t REG_SZ /d " + username + "  /f /reg:64");
             wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultDomainName /t REG_SZ /d " + p+p + " /f /reg:64");
             wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultPassword /t REG_SZ /d " + password + " /f /reg:64");
@@ -45,10 +45,10 @@ namespace AutoLoginBuilder
         }
         private void remover()
         {
-            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v AutoAdminLogon /t REG_SZ /d 0 /f /reg:64");
-            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultUserName /t REG_SZ /d " + p + p + "  /f /reg:64");
-            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultDomainName /t REG_SZ /d " + p + p + " /f /reg:64");
-            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultPassword /t REG_SZ /d " + p + p + " /f /reg:64");
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v AutoAdminLogon /t REG_SZ /d 0 /f");
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultUserName /t REG_SZ /d " + p + p + "  /f");
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultDomainName /t REG_SZ /d " + p + p + " /f");
+            wkr.ExecuteCommand("REG ADD " + p + "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" + p + " /v DefaultPassword /t REG_SZ /d " + p + p + " /f");
         }
     }
 }

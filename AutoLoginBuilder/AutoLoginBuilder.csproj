@@ -102,7 +102,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="chevron.ico" />
     <Content Include="ninjakirby_71d_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
