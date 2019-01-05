@@ -115,6 +115,7 @@
             this.DomainTextBox.Name = "DomainTextBox";
             this.DomainTextBox.Size = new System.Drawing.Size(100, 20);
             this.DomainTextBox.TabIndex = 6;
+            this.DomainTextBox.TextChanged += new System.EventHandler(this.DomainTextBox_TextChanged);
             // 
             // Form1
             // 

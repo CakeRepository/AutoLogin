@@ -21,7 +21,23 @@ namespace AutoLoginBuilder
             else
             {
                 CMDCli cmd = new CMDCli();
-                cmd.arguments(args);
+                if (args[0] == @"/?")
+                {
+                    MessageBox.Show(
+                    "CMD : Results" + "\n" +
+                    "==============================================" + "\n" +
+                    "==============================================" + "\n" +
+                    "AutoLoginBuilder.exe remove : WILL REMOVE AUTOLOGIN" + "\n" +
+                    "AutoLoginBuilder.exe USERNAME PASSWORD : Will add Auto Login for local users" + "\n" +
+                    "AutoLoginBuilder.exe DOMAIN USERNAME PASSWORD : Will add Auto Login for Domain Users" + "\n" +
+                    "==============================================" + "\n" +
+                    "==============================================");
+                }
+
+                else
+                {
+                    cmd.arguments(args);
+                }
             }
         }
     }
