@@ -48,16 +48,18 @@ namespace AutoLoginBuilder
                     v => remove = v != null
                 },
                 {
-                   "u|username=",  "Computer Account being set for Auto Login",
+                   "u|username=",  "Computer Account being set for Auto Login.\n"+
+                   "{Required} to Setup autologin",
                     v => username = v 
                 },
                 {
-                   "p|password=",  "Password for account being set for Auto Login",
+                   "p|password=",  "Password for account being set for Auto Login\n"+
+                   "{Required} to Setup autologin",
                     v => password = v 
                 },
                 {
                    "d|domain=",  "Domain for account being set for Auto Login.\n"+
-                   "Leave Blank for local account",
+                   "{Optional} Blank if not in domain add for Domain",
                     v => domain = v 
                 },
                 
@@ -94,6 +96,8 @@ namespace AutoLoginBuilder
             Console.WriteLine("-----------------------------------------------------");
             Console.WriteLine("      Welcome to the help for this auto Login");
             Console.WriteLine("     Remember domain can be blank for localhost");
+            Console.WriteLine("      You may only ever set or remove not both ");
+            Console.WriteLine("-----------------------------------------------------");
             Console.WriteLine();
             Console.WriteLine("Options:");
             p.WriteOptionDescriptions(Console.Out);
