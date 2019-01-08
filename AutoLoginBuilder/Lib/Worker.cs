@@ -34,17 +34,6 @@ namespace AutoLoginBuilder
                         key.Close();
                     }
                 }
-                else if(username != null && password != null)
-                {                    
-                    if (key != null)
-                    {
-                        key.SetValue("AutoAdminLogon", "1", RegistryValueKind.String);
-                        key.SetValue("DefaultUserName", username, RegistryValueKind.String);
-                        key.SetValue("DefaultDomainName", "", RegistryValueKind.String);
-                        key.SetValue("DefaultPassword", password, RegistryValueKind.String);
-                        key.Close();
-                    }
-                }
                 else
                 {
                     if (key != null)
