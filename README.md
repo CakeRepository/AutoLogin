@@ -1,16 +1,33 @@
-# AutoLogin
+# AutoLogin Intro
+Using the .Net framework to set auto-login registry keys.
 
-This exe creates a auto login to windows 7,8,10 64 bit computer. There are two ways to use the application.
-# First
-Downloading the AutoLogin Buider from \bin\debug\autologinbuilder.exe and running the program
-# Second
-Downloading the AutoLogin Buider from \bin\debug\autologinbuilder.exe and using Command line to run the .exe
-with switches.
-c:\autologinbuilder.exe argument1 argument2 argument3
-# Switches
+Can be run two different ways brienfly described below. GUI and Console
 
-c:\autologinbuilder.exe Domain Username Password (sets auto login with credentials)
+Download the .exe from release and try either method. 
 
-c:\autologinbuilder.exe Username Password (sets auto login with credentials no domain)
+# GUI
+Only Requires password Pulls Domain and Current user
 
-C:\autologinbuilder.exe remove (Removes auto login configuration)
+![Imgur Image](https://i.imgur.com/YT3vj8x.png)
+
+# Console
+Run from command using switches.
+```
+cmd.exe /c /Path/To/AutoLoginBuilder.exe {-h -r -u -p -d}
+-----------------------------------------------------
+      Welcome to the help for this auto Login
+     Remember domain can be blank for localhost
+      You may only ever set or remove not both
+
+
+Options:
+  -h, --help                 Shows help msg and exits
+  -r, --remove               Removes Auto Login
+  -u, --username=Required    Computer Account being set for Auto Login.
+                               Required to Setup autologin
+  -p, --password=Required    Password for account being set for Auto Login
+                               Required to Setup autologin
+  -d, --domain=Optional      Domain for account being set for Auto Login.
+                               Optional Blank if not in domain add for Domain
+-----------------------------------------------------
+```
