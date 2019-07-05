@@ -3,7 +3,7 @@ Using the .Net framework to set auto-login registry keys.
 
 Can be run two different ways brienfly described below. GUI and Console
 
-Download the .exe from release and try either method. 
+Download the .exe from https://github.com/CakeRepository/AutoLogin/releases/download/V2.0/AutoLoginBuilder.exe and try either method. 
 
 # GUI
 Only Requires password Pulls Domain and Current user
